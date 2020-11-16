@@ -1,5 +1,6 @@
 #include <iostream>
 #include "login.h"
+#include "main_menu.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ int main()
 	login_status=login();
 	if (login_status==1)
 	{
-		cout << "Good";
+		main_menu();
 	}
 	cout << endl;
 	system("pause");
