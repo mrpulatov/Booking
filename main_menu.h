@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "adding_new_booking.h"
 
 
 
@@ -28,6 +28,7 @@ int main_menu()
 			goto main_menu_restart;
 		case 2:
 			//function to add new booking
+			adding_new_booking();
 			goto main_menu_restart;
 		case 3:
 			//function to delete booking
