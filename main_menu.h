@@ -10,16 +10,17 @@ int main_menu()
 	int number;
 	main_menu_restart: // point of start menu
 	system("CLS"); // clearing screan
-	cout << "Welcome to main menu of Hotel Booking system!" << endl << endl;
-	cout << "1. Display all orders" << endl;
-	cout << "2. Add new booking" << endl;
-	cout << "3. Remove booking" << endl;
-	cout << "4. Exit" << endl; // printting menu for client
+	cout << "\t\t\t\t\tWelcome to main menu of Hotel Booking system!" << endl;
+	cout << "\t\t\t\t1. Display all orders" << endl;
+	cout << "\t\t\t\t2. Add new booking" << endl;
+	cout << "\t\t\t\t3. Remove booking" << endl;
+	cout << "\t\t\t\t4. Exit" << endl; // printting menu for client
 	enter_number: // point for come back if client will enter not correct number
+	cout << "\t\t\t\t\t\tSelect one option: ";
 	cin >> number; // asking what client whant
 	if (number < 1 || number > 4) // checking is client enter correct numbers
 	{
-		cout << "Please choose one from menu" << endl;
+		cout << "\t\t\t\t\t\tPlease choose one from menu" << endl;
 		goto enter_number; // if no bo back to point entering number
 	}
 	switch (number){ // using switch condition for indentify what whant client

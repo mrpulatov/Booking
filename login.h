@@ -9,16 +9,16 @@ int login(){
 	int exit;
 	system("CLS");
 	if_error:
-	cout << "Please login to system:" << endl;
-	cout << "Username: ";
+	cout << "\t\t\t\t\tPlease login to system:" << endl;
+	cout << "\t\t\t\tUsername: ";
 	cin >> username;
-    cout << "Password: ";
+    cout << "\t\t\t\tPassword: ";
     cin >> password;
     if(password == "admin" && username == "admin"){
        return 1;
     }else{
-    	cout << "Password or username is incorrect." << endl;
-        cout << "If you want exit press 1 else enter 0 : ";
+    	cout << "\n \t\t\t\t\tPassword or username is incorrect." << endl;
+        cout << "\t\t\t\tIf you want exit press 1 else enter 0 : ";
         cin >> exit;
         if (exit==1)
         {
