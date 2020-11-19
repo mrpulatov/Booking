@@ -1,8 +1,8 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
-int date_s[3], days;
 
 void ask_date_details(int *day, int *month, int *year){
 	re_day:
@@ -36,17 +36,27 @@ void ask_date_details(int *day, int *month, int *year){
 	}
 }
 
+int calculate_day(int y, int m, int d){
+	m = (m + 9) % 12;
+	y = y - m/10;
+	return 365*y + y/4 - y/100 + y/400 + (m*306 + 5)/10 + ( d - 1 );
+}
+
 void ask_date(){
-	int day, month, year, a;
+	int day, month, year, days;
+	ofstream myhotel;
+	myhotel.open("hotel.txt", ios::app);
 	system("CLS");
 	cout << "Adding new booking window" << endl;
 	cout << "Please enter the date of ariving: " << endl;
 	ask_date_details(&day, &month, &year);
-	date_s[0]=day;
-	date_s[1]=month;
-	date_s[2]=year;
-	cout << "Please enter the days you want to live: " << endl;
-	cin >> days;
+	myhotel << "{" << day << "," << month << "," << year << ",";
+	days = calculate_day(year, month, day);
+	cout << "Please enter the date of lieving:" << endl;
+	ask_date_details(&day, &month, &year);
+	days = calculate_day(year, month, day) - days;
+	myhotel << day << "," << month << "," << year << "," << days << "} \n";
+	myhotel.close();
 }
 
 
