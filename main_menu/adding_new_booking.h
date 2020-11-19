@@ -103,7 +103,7 @@ void asking_datailes_of_booking(){
 	//function of asking options of booking
 	system("CLS");
 	cout << "\t\t\t\t\tAdding new booking window" << endl;
-	cout << "\n \t\t\t\t\t How many bad do you want? \n \t\t\t For now we have only 2 options 1 bed (40$ per day) and 2 bed (80$ per day) rooms." << endl;
+	cout << "\n \t\t\t\t\t How many bed do you want? \n \t\t\t For now we have only 2 options 1 bed (40$ per day) and 2 bed (80$ per day) rooms." << endl;
 	enter_num:
 	cout << "\n \t\t\t\tNumbers of beds: ";
 	cin >> numbers_of_bed;
@@ -136,6 +136,23 @@ void asking_datailes_of_booking(){
 	}
 }
 
+void saving_booking(){
+	ofstream myhotel; 
+	//function of saving
+	myhotel.open("hotel.txt", ios::app); // opening file where we will save all our bookings
+	myhotel << "{" ;
+	for (int i = 0; i < 13; ++i)
+	{
+		myhotel << data_of_client[i]; // saving each data one buy ine it to text file
+		if (i != 12) // this structure will add coma after all elements exept of 11th
+		{
+			myhotel << ",";
+		}
+	}
+	myhotel << "}\n";
+	myhotel.close(); //closing document
+}
+
 void finishing_booking(){
 	system("CLS");
 	int price;
@@ -156,7 +173,7 @@ void finishing_booking(){
 	cout << "\t\t\t\t\t\tFor option : '" << data_of_client[11];
 	if (data_of_client[11] == "Room with kitchen")
 	{
-		cout << "' 30$\n";
+		cout << "' + 30$\n";
 		price = price + 30;
 	}
 	if (data_of_client[11] == "With breakfast")
@@ -168,7 +185,7 @@ void finishing_booking(){
 	{
 		cout << "' 0$\n";
 	}
-	cout << "\t\t\t\t\t\t\t\t Total: " << price << "$\n";
+	cout << "\n \t\t\t\t\t\t\t\t Total: " << price << "$\n";
 	data_of_client[12]=to_string(price);
 	cout << "\n \t\t\t\t\tVerify booking? (y/n) : ";
 	cin >> verify;
@@ -178,22 +195,6 @@ void finishing_booking(){
 	}
 }
 
-void saving_booking(){
-	ofstream myhotel; 
-	//function of saving
-	myhotel.open("hotel.txt", ios::app); // opening file where we will save all our bookings
-	myhotel << "{" ;
-	for (int i = 0; i < 13; ++i)
-	{
-		myhotel << data_of_client[i]; // saving each data one buy ine it to text file
-		if (i != 12) // this structure will add coma after all elements exept of 11th
-		{
-			myhotel << ",";
-		}
-	}
-	myhotel << "}\n";
-	myhotel.close(); //closing document
-}
 
 int adding_new_booking(){
 	//main function of adding new booking
