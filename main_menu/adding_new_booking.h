@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 using namespace std;
 
 int date_s[3], days;
@@ -48,12 +47,12 @@ void ask_date(){
 	date_s[2]=year;
 	cout << "Please enter the days you want to live: " << endl;
 	cin >> days;
-
 }
 
 
 int adding_new_booking(){
 	ask_date();
+
 	return 0;
 }
 
