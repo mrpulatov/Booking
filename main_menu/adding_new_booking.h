@@ -44,8 +44,8 @@ int calculate_day(int y, int m, int d){
 
 void ask_date(){
 	int day, month, year, days;
-	ofstream myhotel;
-	myhotel.open("hotel.txt", ios::app);
+	ofstream myhotel; 
+	myhotel.open("hotel.txt", ios::app); 
 	system("CLS");
 	cout << "Adding new booking window" << endl;
 	cout << "Please enter the date of ariving: " << endl;
@@ -61,7 +61,8 @@ void ask_date(){
 
 
 int adding_new_booking(){
-	ask_date();
+	//main function of adding new booking
+	ask_date(); // first step of booking : Asking date
 
 	return 0;
 }
