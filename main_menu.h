@@ -1,5 +1,6 @@
 #include <iostream>
 #include "main_menu/adding_new_booking.h"
+#include "main_menu/display_booking.h"
 
 
 
@@ -11,7 +12,7 @@ int main_menu()
 	main_menu_restart: // point of start menu
 	system("CLS"); // clearing screan
 	cout << "\t\t\t\t\tWelcome to main menu of Hotel Booking system!" << endl;
-	cout << "\t\t\t\t1. Display all orders" << endl;
+	cout << "\t\t\t\t1. Display all bookings" << endl;
 	cout << "\t\t\t\t2. Add new booking" << endl;
 	cout << "\t\t\t\t3. Remove booking" << endl;
 	cout << "\t\t\t\t4. Exit" << endl; // printting menu for client
@@ -26,6 +27,7 @@ int main_menu()
 	switch (number){ // using switch condition for indentify what whant client
 		case 1:
 			//function to display all orders
+			display_booking();
 			goto main_menu_restart; // after finishing process of displaying bookings will go to menu again
 		case 2:
 			//function to add new booking

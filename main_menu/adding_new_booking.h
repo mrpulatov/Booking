@@ -140,7 +140,6 @@ void saving_booking(){
 	ofstream myhotel; 
 	//function of saving
 	myhotel.open("hotel.txt", ios::app); // opening file where we will save all our bookings
-	myhotel << "{" ;
 	for (int i = 0; i < 13; ++i)
 	{
 		myhotel << data_of_client[i]; // saving each data one buy ine it to text file
@@ -149,7 +148,7 @@ void saving_booking(){
 			myhotel << ",";
 		}
 	}
-	myhotel << "}\n";
+	myhotel << "\n";
 	myhotel.close(); //closing document
 }
 

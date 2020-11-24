@@ -1,0 +1,2 @@
+2,3,2020,3,3,2020,1,Ubaydulla,Pulatov,AB4873843,1,With breakfast,44
+3,3,2021,4,4,2021,32,Habibulla,Pulatob,AA23232,1,Room with kitchen,1310
