@@ -1,8 +1,14 @@
+//Pulatov Ubaydulla
+//U2010210
+
 #include <iostream>
 #include "login.h"
 #include "main_menu.h"
 
 using namespace std;
+
+
+// username andpassword is "admin"
 
 int main()
 {

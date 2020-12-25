@@ -1,3 +1,6 @@
+//Pulatov Ubaydulla
+//U2010210
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -125,13 +128,13 @@ void asking_datailes_of_booking(){
 	data_of_client[10]= to_string(numbers_of_bed);
 	switch(meal_option){
 		case 1:
-		data_of_client[11]="Room with kitchen";
+		data_of_client[11]="Room_with_kitchen";
 		break;
 		case 2:
-		data_of_client[11]="With breakfast";
+		data_of_client[11]="With_breakfast";
 		break;
 		case 3:
-		data_of_client[11]="With out option";
+		data_of_client[11]="With_out_option";
 		break;// saving data to variable
 	}
 }
@@ -145,7 +148,7 @@ void saving_booking(){
 		myhotel << data_of_client[i]; // saving each data one buy ine it to text file
 		if (i != 12) // this structure will add coma after all elements exept of 11th
 		{
-			myhotel << ",";
+			myhotel << " ";
 		}
 	}
 	myhotel << "\n";

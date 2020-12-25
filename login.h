@@ -1,3 +1,6 @@
+//Pulatov Ubaydulla
+//U2010210
+
 #include <iostream>
 #include <string>
 

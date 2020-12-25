@@ -1,3 +1,6 @@
+//Pulatov Ubaydulla
+//U2010210
+
 #include <iostream>
 #include "main_menu/adding_new_booking.h"
 #include "main_menu/display_booking.h"
@@ -14,7 +17,7 @@ int main_menu()
 	cout << "\t\t\t\t\tWelcome to main menu of Hotel Booking system!" << endl;
 	cout << "\t\t\t\t1. Display all bookings" << endl;
 	cout << "\t\t\t\t2. Add new booking" << endl;
-	cout << "\t\t\t\t3. Remove booking" << endl;
+	cout << "\t\t\t\t3. Remove booking(Doesn't work for now)" << endl;
 	cout << "\t\t\t\t4. Exit" << endl; // printting menu for client
 	enter_number: // point for come back if client will enter not correct number
 	cout << "\t\t\t\t\t\tSelect one option: ";
