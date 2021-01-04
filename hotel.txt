@@ -2,3 +2,5 @@
 3 3 2021 4 4 2021 32 Habibulla Pulatob AA23232 1 Room_with_kitchen 1310
 18 12 2020 3 1 2021 16 Ubaydulla Pulatov AB1231233 1 With_breakfast 704
 2 3 2021 5 3 2021 3 Ubaydulla pulatov Anvcpd 2 Room_with_kitchen 270
+3 2 2021 5 3 2021 30 Ubaydulla Pulatov U201021 1 Room_with_kitchen 1200
+1 1 2021 2 1 2021 1 1 1 1 1 Room_with_kitchen 70
