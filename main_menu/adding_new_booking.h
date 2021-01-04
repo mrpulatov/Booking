@@ -173,17 +173,17 @@ void finishing_booking(){
 	cout << "\t" << data_of_client[6] << " day * " << data_of_client[10] << " bed * 40$ = " << price << "$\n";
 
 	cout << "\t\t\t\t\t\tFor option : '" << data_of_client[11];
-	if (data_of_client[11] == "Room with kitchen")
+	if (data_of_client[11] == "Room_with_kitchen")
 	{
 		cout << "' + 30$\n";
 		price = price + 30;
 	}
-	if (data_of_client[11] == "With breakfast")
+	if (data_of_client[11] == "With_breakfast")
 	{
 		cout << "' " << data_of_client[6] << " day * 4$ = " << stoi(data_of_client[6])*4 << "$\n";
 		price = price + stoi(data_of_client[6])*4;
 	}
-	if (data_of_client[11] == "With out option")
+	if (data_of_client[11] == "With_out_option")
 	{
 		cout << "' 0$\n";
 	}
